@@ -25,5 +25,7 @@ A MERN stack-based web application to manage airline finances, including ticket 
 ## 📁 Folder Structure
 root/
 ├── backend/ # Express server, APIs, DB models
+
 ├── frontend/ # React client app
+
 └── README.md # Project info and instructions
