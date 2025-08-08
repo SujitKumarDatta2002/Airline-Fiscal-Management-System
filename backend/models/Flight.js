@@ -1,4 +1,4 @@
-// backend/models/Flight.js
+
 const mongoose = require("mongoose");
 
 const flightSchema = new mongoose.Schema({
@@ -14,4 +14,4 @@ const flightSchema = new mongoose.Schema({
 
 module.exports = mongoose.model("Flight", flightSchema);
 
-// ---
+

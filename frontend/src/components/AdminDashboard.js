@@ -1,8 +1,8 @@
-// frontend/src/components/AdminDashboard.js
+
 import React, { useState, useEffect } from "react";
 
 const AdminDashboard = ({ api }) => {
-  const [activeTab, setActiveTab] = useState("flights"); // 'flights' or 'users'
+  const [activeTab, setActiveTab] = useState("flights"); 
 
   return (
     <div className="bg-white p-8 rounded-lg shadow-xl">
@@ -40,7 +40,6 @@ const AdminDashboard = ({ api }) => {
   );
 };
 
-// --- Flight Manager Sub-component ---
 const FlightManager = ({ api }) => {
   const [flights, setFlights] = useState([]);
   const [formData, setFormData] = useState({
@@ -216,7 +215,7 @@ const FlightManager = ({ api }) => {
   );
 };
 
-// --- User Manager Sub-component ---
+
 const UserManager = ({ api }) => {
   const [users, setUsers] = useState([]);
   const [selectedUser, setSelectedUser] = useState(null);

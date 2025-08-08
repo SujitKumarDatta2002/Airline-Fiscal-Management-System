@@ -1,4 +1,4 @@
-// FILE: backend/controllers/adminController.js
+
 const Flight = require("../models/Flight");
 const User = require("../models/User");
 
@@ -35,7 +35,6 @@ exports.updateFlight = async (req, res) => {
 // Get all users
 exports.getAllUsers = async (req, res) => {
   try {
-    // Find all users and exclude their passwords from the result
     const users = await User.find().select("-password");
     res.json(users);
   } catch (err) {
@@ -51,7 +50,7 @@ exports.updateUserTokens = async (req, res) => {
     let user = await User.findById(req.params.id);
     if (!user) return res.status(404).json({ msg: "User not found" });
 
-    // Update the user's token count
+
     user.tokens = tokens;
     await user.save();
 

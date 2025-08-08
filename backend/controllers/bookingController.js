@@ -1,43 +1,7 @@
-// // backend/controllers/bookingController.js
-// const Booking = require("../models/Booking");
-// const Flight = require("../models/Flight");
 
-// exports.createBooking = async (req, res) => {
-//   const { flightId, seatNumber } = req.body;
-//   try {
-//     const flight = await Flight.findById(flightId);
-//     if (!flight) {
-//       return res.status(404).json({ msg: "Flight not found" });
-//     }
-//     if (flight.bookedSeats.includes(seatNumber)) {
-//       return res.status(400).json({ msg: "Seat already booked" });
-//     }
-//     if (seatNumber < 1 || seatNumber > flight.totalSeats) {
-//       return res.status(400).json({ msg: "Invalid seat number" });
-//     }
-
-//     flight.bookedSeats.push(seatNumber);
-//     await flight.save();
-
-//     const newBooking = new Booking({
-//       user: req.user.id,
-//       flight: flightId,
-//       seatNumber,
-//     });
-
-//     const booking = await newBooking.save();
-//     res.json(booking);
-//   } catch (err) {
-//     console.error(err.message);
-//     res.status(500).send("Server Error");
-//   }
-// };
-
-// // ---
-// FILE: backend/controllers/bookingController.js (Updated createBooking function)
 const Booking = require("../models/Booking");
 const Flight = require("../models/Flight");
-const User = require("../models/User"); // ADDED: User model
+const User = require("../models/User");
 
 exports.createBooking = async (req, res) => {
   const { flightId, seatNumber } = req.body;
@@ -52,7 +16,6 @@ exports.createBooking = async (req, res) => {
       return res.status(404).json({ msg: "User not found" });
     }
 
-    // UPDATED: Check if user has enough tokens
     if (user.tokens < flight.price) {
       return res
         .status(400)
@@ -66,7 +29,6 @@ exports.createBooking = async (req, res) => {
       return res.status(400).json({ msg: "Invalid seat number" });
     }
 
-    // UPDATED: Deduct tokens from user
     user.tokens -= flight.price;
     await user.save();
 
@@ -80,7 +42,7 @@ exports.createBooking = async (req, res) => {
     });
 
     const booking = await newBooking.save();
-    res.json({ booking, remainingTokens: user.tokens }); // UPDATED: Return remaining tokens
+    res.json({ booking, remainingTokens: user.tokens }); 
   } catch (err) {
     console.error(err.message);
     res.status(500).send("Server Error");

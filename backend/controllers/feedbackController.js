@@ -1,4 +1,4 @@
-// backend/controllers/feedbackController.js
+
 const Feedback = require("../models/Feedback");
 const Flight = require("../models/Flight");
 

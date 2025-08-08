@@ -1,4 +1,3 @@
-// FILE: src/components/Signup.js
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
@@ -19,7 +18,7 @@ const Signup = ({ api, setIsAuthenticated }) => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    setError(""); // Clear previous errors
+    setError("");
     if (password !== password2) {
       setError("Passwords do not match");
       return;

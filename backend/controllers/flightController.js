@@ -1,4 +1,4 @@
-// backend/controllers/flightController.js
+
 const Flight = require("../models/Flight");
 
 exports.getAllFlights = async (req, res) => {
@@ -24,4 +24,4 @@ exports.getFlightById = async (req, res) => {
   }
 };
 
-// ---
+
