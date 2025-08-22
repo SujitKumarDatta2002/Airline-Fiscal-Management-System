@@ -1,0 +1,106 @@
+flights:
+
+[
+  {
+    "flightNumber": "BG-433",
+    "origin": "Dhaka (DAC)",
+    "destination": "Chittagong (CGP)",
+    "departureTime": { "$date": "2025-09-15T07:30:00Z" },
+    "arrivalTime": { "$date": "2025-09-15T08:25:00Z" },
+    "price": 4000,
+    "totalSeats": 70,
+    "bookedSeats": []
+  },
+  {
+    "flightNumber": "BS-141",
+    "origin": "Dhaka (DAC)",
+    "destination": "Cox's Bazar (CXB)",
+    "departureTime": { "$date": "2025-09-15T11:00:00Z" },
+    "arrivalTime": { "$date": "2025-09-15T12:05:00Z" },
+    "price": 5500,
+    "totalSeats": 70,
+    "bookedSeats": []
+  },
+  {
+    "flightNumber": "BG-601",
+    "origin": "Dhaka (DAC)",
+    "destination": "Sylhet (ZYL)",
+    "departureTime": { "$date": "2025-09-16T09:00:00Z" },
+    "arrivalTime": { "$date": "2025-09-16T09:50:00Z" },
+    "price": 3800,
+    "totalSeats": 70,
+    "bookedSeats": []
+  },
+  {
+    "flightNumber": "BS-121",
+    "origin": "Dhaka (DAC)",
+    "destination": "Jessore (JSR)",
+    "departureTime": { "$date": "2025-09-16T14:00:00Z" },
+    "arrivalTime": { "$date": "2025-09-16T14:45:00Z" },
+    "price": 3500,
+    "totalSeats": 70,
+    "bookedSeats": []
+  },
+  {
+    "flightNumber": "BG-391",
+    "origin": "Dhaka (DAC)",
+    "destination": "Kolkata (CCU)",
+    "departureTime": { "$date": "2025-09-20T08:15:00Z" },
+    "arrivalTime": { "$date": "2025-09-20T08:55:00Z" },
+    "price": 8500,
+    "totalSeats": 120,
+    "bookedSeats": []
+  },
+  {
+    "flightNumber": "BS-341",
+    "origin": "Dhaka (DAC)",
+    "destination": "Dubai (DXB)",
+    "departureTime": { "$date": "2025-09-21T18:45:00Z" },
+    "arrivalTime": { "$date": "2025-09-21T22:30:00Z" },
+    "price": 35000,
+    "totalSeats": 160,
+    "bookedSeats": []
+  },
+  {
+    "flightNumber": "BG-386",
+    "origin": "Dhaka (DAC)",
+    "destination": "Kuala Lumpur (KUL)",
+    "departureTime": { "$date": "2025-09-22T20:00:00Z" },
+    "arrivalTime": { "$date": "2025-09-23T02:00:00Z" },
+    "price": 28000,
+    "totalSeats": 160,
+    "bookedSeats": []
+  },
+  {
+    "flightNumber": "BS-311",
+    "origin": "Dhaka (DAC)",
+    "destination": "Singapore (SIN)",
+    "departureTime": { "$date": "2025-09-23T01:15:00Z" },
+    "arrivalTime": { "$date": "2025-09-23T07:20:00Z" },
+    "price": 32000,
+    "totalSeats": 160,
+    "bookedSeats": []
+  }
+]
+
+employee:
+
+[
+  { "name": "Arafat Hossain", "role": "Pilot", "salary": 250000 },
+  { "name": "Rafi Ahmed", "role": "Co-Pilot", "salary": 180000 },
+  { "name": "Tanvir Alam", "role": "Cabin Crew", "salary": 80000 },
+  { "name": "Sajid Karim", "role": "Cabin Crew", "salary": 80000 },
+  { "name": "Nayeem Chowdhury", "role": "Ground Staff", "salary": 60000 },
+  { "name": "Farhan Rahman", "role": "Ground Staff", "salary": 60000 },
+  { "name": "Mahir Khan", "role": "Maintenance Engineer", "salary": 150000 },
+  { "name": "Zubair Siddique", "role": "Maintenance Engineer", "salary": 150000 },
+  { "name": "Jannat Akter", "role": "Ticket Agent", "salary": 55000 },
+  { "name": "Sumaiya Khatun", "role": "Ticket Agent", "salary": 55000 },
+  { "name": "Moumita Das", "role": "Air Hostess", "salary": 90000 },
+  { "name": "Nusrat Jahan", "role": "Air Hostess", "salary": 90000 },
+  { "name": "Tamanna Sultana", "role": "Air Hostess", "salary": 90000 },
+  { "name": "Safa Chowdhury", "role": "Customer Service", "salary": 65000 },
+  { "name": "Anika Rahman", "role": "Customer Service", "salary": 65000 }
+]
+
+

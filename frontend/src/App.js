@@ -14,8 +14,7 @@ import Signup from "./components/Signup";
 import Flights from "./components/Flights";
 import Booking from "./components/Booking";
 import Feedback from "./components/Feedback";
-import AdminDashboard from "./components/AdminDashboard"; 
-import AdminDashboard from "./components/AdminDashboard"; 
+import AdminDashboard from "./components/AdminDashboard";
 
 const API = axios.create({ baseURL: "http://localhost:4000/api" });
 
@@ -25,7 +24,6 @@ API.interceptors.request.use((req) => {
   }
   return req;
 });
-
 
 function App() {
   return (
@@ -37,13 +35,13 @@ function App() {
 
 const MainLayout = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [userRole, setUserRole] = useState(null); 
+  const [userRole, setUserRole] = useState(null);
   const location = useLocation();
   const isHomePage = location.pathname === "/";
 
   useEffect(() => {
     const token = localStorage.getItem("token");
-    const role = localStorage.getItem("userRole"); 
+    const role = localStorage.getItem("userRole");
     if (token) {
       setIsAuthenticated(true);
       setUserRole(role);
@@ -60,7 +58,6 @@ const MainLayout = () => {
 
   return (
     <div className="bg-gray-100 min-h-screen font-sans flex flex-col">
-  
       <Navbar
         isAuthenticated={isAuthenticated}
         handleLogout={handleLogout}
@@ -88,7 +85,7 @@ const MainLayout = () => {
           />
           <Route path="/book/:flightId" element={<Booking api={API} />} />
           <Route path="/feedback/:flightId" element={<Feedback api={API} />} />
-          
+
           <Route path="/admin" element={<AdminDashboard api={API} />} />
         </Routes>
       </main>
@@ -96,7 +93,6 @@ const MainLayout = () => {
     </div>
   );
 };
-
 
 const Navbar = ({ isAuthenticated, handleLogout, userRole }) => {
   return (
@@ -120,15 +116,7 @@ const Navbar = ({ isAuthenticated, handleLogout, userRole }) => {
               Flights
             </Link>
 
-            {/* ADDED: Show Admin link if user is an admin */}
-            {isAuthenticated && userRole === "admin" && (
-              <Link
-                to="/admin"
-                className="text-gray-800 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Admin
-              </Link>
-            )}
+            
 
             {isAuthenticated ? (
               <button
@@ -159,7 +147,6 @@ const Navbar = ({ isAuthenticated, handleLogout, userRole }) => {
     </nav>
   );
 };
-
 
 const Footer = () => {
   return (
